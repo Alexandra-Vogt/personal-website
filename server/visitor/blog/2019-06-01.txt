@@ -1,0 +1,58 @@
+Hello World!
+ 
+So I have finally set up the system that serves as my website and wow was it
+a journey. After months of tinkering about with a website system that has been
+objectively inferior to my current website that I built in four hours.
+
+Of course this current website probably has a design that is utterly confusing
+to some, but I believe I will reach my target audience rather well with this.
+ 
+So I have learned several basic lessons:
+ 
+1. Programming is 20% code, 20% legible code, and 60% knowing who's code to
+    steal so you can stitch it together into your own grotesque frankenstein's
+    monster of a program. Being a brilliant coder will absolutely yield results
+    and certainly it is possible to build whole worlds of software from scratch.
+    But it is advisable to consider the
+
+2. Automation is way easier than it looks. Writing a proper bash script to
+    automate a deployment takes maybe 20% more effort for a 160% increase in
+    productivity. Did you know that 90% of statistics are made up on the spot?
+    But in all seriousness, if you think you might need to do something more
+    than once, write a script for it. It will save you time and is truly not
+    that hard at all compared to slowly manually setting up a server.
+
+3. Infrastructure automation allows you to do so much more and take far greater
+    risks. If a programmer who has automated their infrastructure deployments
+    faces a failure on a server because they messed something up they can
+    trivially roll back a version, deploy the old one, and try to find out what
+    went wrong. The programmer who has not automated infrastructure deployments
+    has no such luxuries. Instead they are forced to consider each server as
+    precious. Every error they make hangs around their neck for all to see,
+    resulting in inefficiency compared to the programmer that automates their
+    infrastructure deployments
+
+4. You know, human interaction is nice, but have you ever typed ./refresh and
+    had your entire website get updated automatically complete with fresh VM?
+    I have. It feels great.
+
+Now you may be wondering how exactly this server works.
+
+Basically what you are currently running on is a temporary docker container
+based on alpine linux with a few modifications. It contains my blog and soon
+will contain a variety of games, virtual machines, and interpeters for the user
+to experience.
+
+To deploy updates (currently) the process follows these easy, automated steps:
+The old server is deleted, a new server is made, the files for the new server
+are transferred. The setup script is started and installs docker as well as
+goTTY. Then the docker image is created from the previously mentioned files
+transferred to the server. Following this the gotty program is executed to run 
+the resulting docker image is run using goTTY to transmit it to port 80. Then
+the server has it's tags modified to permit http access.
+
+Tommorow I intend to automate the process of updating the server and also make
+it seamless. That is to say that all updates will not result in a server outage
+as they currently do due to my lazy coding.
+
+

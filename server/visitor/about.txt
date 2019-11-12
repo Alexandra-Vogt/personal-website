@@ -1,0 +1,30 @@
+Hi, I am Alexandra Marie Miller and this is (obviously) my rather basic 
+website. It was designed to allow the user to experience the various programs 
+that I have made without having to install them on their systems with any 
+dependencies or other requirements while also providing a unique website that is
+enjoyable to explore and mess with.
+
+The "blog" directory contains (poorly written) blog posts regarding my
+experiences programming and life in general.
+
+The "games" directory contains some basic games that I have written in a number
+of languages along with the source code.These games were mostly developed either
+while learning the languages they are written in or for personal enjoyment
+
+The "lang" directory contains compilers/interpeters for the languages I have
+written as well as the source code for them. The VMs used for the languages
+are not duplicated in the "vm" directory.
+
+The "misc" directory contains a variety of random programs for various tasks
+that may or may not be at all useful. Some are destructive. Some are not.
+
+The "vm" directory contains some virtual machines that I have written. They vary
+in quality but tend to be better than the games. They all have primitive
+assembly languages written for them, but nothing more.
+
+If you notice any vulnrabilities in this website please send me an email 
+describing it to webmaster@alexandra.systems and I will get on it as soon as I 
+can. Feel free to poke around with it too, if you crash the thing the server 
+will be nuked automatically should the system detect that the website has been
+modified by an unauthorized user. Just please do not DOS the thing more than you 
+need to confirm a vuln exists. Thanks for your compliance
